@@ -1,0 +1,139 @@
+// BEM方式で命名
+@charset "UTF-8";
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  color: #000;
+}
+
+img {
+  max-width: 100%;
+}
+
+img {
+  display: block;
+}
+
+.recipe {
+  display: flex;
+  margin-bottom: 60px;
+
+  &__image {
+    width: 50%;
+  }
+
+  &__content {
+    width: 50%;
+    padding: 40px 5% 0;
+  }
+
+  &__title {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  // 材料
+  &__section-title {
+    border-bottom: solid 1px #ccc;
+    padding-bottom: 5px;
+    margin: 35px 0 10px;
+  }
+
+  &__ingredients {
+    display: flex;
+    flex-wrap: wrap;
+
+    dt {
+      width: 80%;
+      border-bottom: dotted 1px #ccc;
+      padding: 10px 0;
+    }
+
+    dd {
+      width: 15%;
+      border-bottom: dotted 1px #ccc;
+      padding: 6px 0;
+      text-align: right;
+    }
+  }
+  // 作り方
+  &__steps {
+    list-style: decimal;
+    padding-left: 1em;
+  }
+
+  &__step {
+    border-bottom: dotted 1px #ccc;
+    padding: 6px 0;
+  }
+}
+
+// ボタン
+.button {
+  text-align: center;
+  margin-bottom: 60px;
+
+  &__link {
+    display: inline-block;
+    border: solid 1px #2b2a27;
+    font-size: 0.875rem;
+    padding: 18px 60px;
+    text-decoration: none;
+  }
+}
+
+// フッター
+.footer {
+  font-size: 10px;
+  padding: 20px;
+  text-align: center;
+
+  &__sns {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+
+    &-item {
+      margin: 0 10px;
+    }
+  }
+  &__copyright {
+    text-align: center;
+    display: block;
+    width: 100%;
+  }
+}
+// SP
+@media screen and (max-width: 834px) {
+  .recipe {
+    flex-direction: column;
+
+    &__image,
+    &__content {
+      width: 100%;
+    }
+
+    &__image img {
+      height: auto;
+    }
+  }
+}
