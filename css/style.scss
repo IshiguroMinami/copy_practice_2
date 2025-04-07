@@ -1,5 +1,6 @@
 // BEM方式で命名
 @charset "UTF-8";
+
 *,
 *::before,
 *::after {
@@ -8,13 +9,11 @@
   box-sizing: border-box;
 }
 
-ul,
-ol {
+ul, ol {
   list-style: none;
 }
 
 a {
-  text-decoration: none;
   color: inherit;
 }
 
@@ -23,15 +22,15 @@ html {
 }
 
 body {
-  color: #000;
-}
-
-img {
-  max-width: 100%;
+  font-size: 1rem;
+  color: #2b2a27;
+  font-family: "Helvetica Neue", "Arial", "Hiragino Sans", "Meiryo", sans-serif;
 }
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .recipe {
@@ -40,6 +39,11 @@ img {
 
   &__image {
     width: 50%;
+    img {
+      width: 100%;
+      height: 700px;
+      object-fit: cover;
+    }
   }
 
   &__content {
@@ -48,14 +52,15 @@ img {
   }
 
   &__title {
-    font-size: 30px;
+    font-size: 1.75rem;
     margin-bottom: 20px;
   }
-  // 材料
+
   &__section-title {
     border-bottom: solid 1px #ccc;
+    font-size: 1.25rem;
     padding-bottom: 5px;
-    margin: 35px 0 10px;
+    margin: 40px 0 15px;
   }
 
   &__ingredients {
@@ -63,9 +68,9 @@ img {
     flex-wrap: wrap;
 
     dt {
-      width: 80%;
+      width: 85%;
       border-bottom: dotted 1px #ccc;
-      padding: 10px 0;
+      padding: 6px 0;
     }
 
     dd {
@@ -75,22 +80,23 @@ img {
       text-align: right;
     }
   }
-  // 作り方
+
   &__steps {
     list-style: decimal;
-    padding-left: 1em;
+    list-style-position: outside;
+    padding-left: 0;
   }
 
   &__step {
     border-bottom: dotted 1px #ccc;
     padding: 6px 0;
+    margin-left: 20px;
   }
 }
 
-// ボタン
 .button {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 80px;
 
   &__link {
     display: inline-block;
@@ -101,9 +107,8 @@ img {
   }
 }
 
-// フッター
 .footer {
-  font-size: 10px;
+  font-size: 0.75rem;
   padding: 20px;
   text-align: center;
 
@@ -114,15 +119,19 @@ img {
 
     &-item {
       margin: 0 10px;
+      font-size: 0.875rem;
+      font-size: 12px;
     }
   }
+
   &__copyright {
     text-align: center;
     display: block;
     width: 100%;
+    font-size: 12px;
   }
 }
-// SP
+
 @media screen and (max-width: 834px) {
   .recipe {
     flex-direction: column;
