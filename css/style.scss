@@ -1,6 +1,11 @@
 // BEM方式で命名
 @charset "UTF-8";
 
+$color-text: #2b2a27;
+$color-border: #ccc;
+$border-dotted: dotted 1px $color-border;
+$font-main: "Helvetica Neue", "Arial", "Hiragino Sans", "Meiryo", sans-serif;
+
 *,
 *::before,
 *::after {
@@ -23,8 +28,8 @@ html {
 
 body {
   font-size: 1rem;
-  color: #2b2a27;
-  font-family: "Helvetica Neue", "Arial", "Hiragino Sans", "Meiryo", sans-serif;
+  color: $color-text;
+  font-family: $font-main;
 }
 
 img {
@@ -57,7 +62,7 @@ img {
   }
 
   &__section-title {
-    border-bottom: solid 1px #ccc;
+    border-bottom: solid 1px $color-border;
     font-size: 1.25rem;
     padding-bottom: 5px;
     margin: 40px 0 15px;
@@ -69,13 +74,13 @@ img {
 
     dt {
       width: 85%;
-      border-bottom: dotted 1px #ccc;
+      border-bottom: $border-dotted;
       padding: 6px 0;
     }
 
     dd {
       width: 15%;
-      border-bottom: dotted 1px #ccc;
+      border-bottom: $border-dotted;
       padding: 6px 0;
       text-align: right;
     }
@@ -88,7 +93,7 @@ img {
   }
 
   &__step {
-    border-bottom: dotted 1px #ccc;
+    border-bottom: $border-dotted;
     padding: 6px 0;
     margin-left: 20px;
   }
@@ -100,7 +105,7 @@ img {
 
   &__link {
     display: inline-block;
-    border: solid 1px #2b2a27;
+    border: solid 1px $color-text;
     font-size: 0.875rem;
     padding: 18px 60px;
     text-decoration: none;
